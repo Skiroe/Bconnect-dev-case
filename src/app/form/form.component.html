@@ -1,7 +1,7 @@
 <form (ngSubmit)="save()">
-  <mat-form-field >
+  <mat-form-field>
     <mat-label>Company Name</mat-label>
-    <input class="input" matInput placeholder="Company Name"
+    <input  matInput placeholder="Company Name"
            [(ngModel)]="companyName"
            name="companyName"
            [formControl]="companyNameValidator"
@@ -39,6 +39,7 @@
            [(ngModel)]="cocNumber"
            [formControl]="cocNumberValidator"
            name="cocNumber"
+           type="number"
            required>
     <mat-icon matPrefix>account_balance</mat-icon>
     <mat-error *ngIf="cocNumberValidator.invalid ">CoC Number is required</mat-error>
@@ -49,7 +50,8 @@
     <input matInput placeholder="VAT Number"
            [(ngModel)]="vatNumber"
            [formControl]="vatNumberValidator"
-           name="vatNumber" required>
+           name="vatNumber"
+           required>
     <mat-icon matPrefix>account_balance</mat-icon>
     <mat-error *ngIf="vatNumberValidator.invalid ">VAT Number is required</mat-error>
   </mat-form-field>
@@ -67,7 +69,7 @@
 
   <mat-form-field>
     <mat-label>Budget</mat-label>
-    <input matInput placeholder="Budget" [(ngModel)]="budget" name="budget">
+    <input matInput placeholder="Budget" [(ngModel)]="budget" name="budget" type="number">
     <mat-icon matPrefix>euro_symbol</mat-icon>
   </mat-form-field>
 
@@ -83,6 +85,7 @@
     <mat-error *ngIf="descriptionValidator.invalid">Description is required and cannot exceed 1000 characters</mat-error>
     <mat-icon matPrefix>notes</mat-icon>
   </mat-form-field>
+
 
   <button mat-raised-button type="submit">Save</button>
 

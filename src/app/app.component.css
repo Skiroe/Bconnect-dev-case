@@ -34,7 +34,7 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #414141;
+  background: linear-gradient(90deg, rgba(36,24,238,1) 50%, rgba(133,6,167,1) 88%);
   color: white;
   font-weight: 600;
 }
